@@ -26,5 +26,18 @@ urlpatterns = [
     path('boards/new_topic/<int:board_id>', board_view.new_topic, name='new_topic'),
     path('signup/', account_view.signup, name='signup'),
     path('logout/', auth_view.LogoutView.as_view(), name='logout'),
-    path('login/', auth_view.LoginView.as_view(template_name='login.html'), name='login')
+    path('login/', auth_view.LoginView.as_view(template_name='login.html'), name='login'),
+    path('reset/', auth_view.PasswordResetView.as_view(
+        template_name='password_reset.html',
+        email_template_name='password_reset_email.html',
+        subject_template_name='password_reset_subject.txt'
+    ), name='password_reset'),
+    path('reset/done/', auth_view.PasswordResetDoneView.as_view(
+        template_name='password_reset_done.html'), name='password_reset_done'),
+    path('reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/',
+         auth_view.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'),
+         name='password_reset_confirm'),
+    path('reset/complete/',
+         auth_view.PasswordResetCompleteView.as_view(template_name='password_reset_complete.html'),
+         name='password_reset_complete'),
 ]
