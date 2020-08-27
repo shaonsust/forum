@@ -27,6 +27,8 @@ urlpatterns = [
     path('boards/new_topic/<int:board_id>', board_view.new_topic, name='new_topic'),
     path('boards/<int:pk>/topics/<topic_pk>', board_view.topic_posts, name='topic_posts'),
     path('boards/<int:pk>/topics/<topic_pk>/reply', board_view.reply_topic, name='reply_topic'),
+    path('boards/<int:pk>/topics/<int:topic_pk>/posts/<int:post_pk>/edit/',
+         board_view.PostUpdateView.as_view(), name='edit_post'),
 
     path('login/', auth_view.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_view.LogoutView.as_view(), name='logout'),
