@@ -1,5 +1,7 @@
-markdown
 asgiref==3.2.10
 Django==3.0.8
+django-widget-tweaks==1.4.8
+Markdown==3.2.2
 pytz==2020.1
+reverse==0.1.0
 sqlparse==0.3.1
