@@ -40,7 +40,7 @@ urlpatterns = [
     ), name='password_reset'),
     path('reset/done/', auth_view.PasswordResetDoneView.as_view(
         template_name='password_reset_done.html'), name='password_reset_done'),
-    path('reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/',
+    path('reset/<uidb64>/<token>/',
          auth_view.PasswordResetConfirmView.as_view(template_name='password_reset_confirm.html'),
          name='password_reset_confirm'),
     path('reset/complete/',
