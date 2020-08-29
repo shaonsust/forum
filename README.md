@@ -3,7 +3,7 @@
 [![Python Version](https://img.shields.io/badge/python-3.8-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-3.0.8-brightgreen.svg)](https://djangoproject.com)
 
-I have built this forum application by following vitorfs's tutorial series. For the complete tutorial series index [click here](https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/).
+I have built this forum application by following vitorfs's tutorial series. For the complete tutorial series, please [click here](https://simpleisbetterthancomplex.com/series/beginners-guide/1.11/).
 
 
 ## Running the Project Locally
@@ -12,6 +12,16 @@ First, clone the repository to your local machine:
 
 ```bash
 https://github.com/shaonsust/Forum.git
+```
+
+Go to root folder where manage.py file is exist. Run following command to create virtual environment:
+```bash
+python3.8 -m venv venv
+```
+
+Go to root folder where manage.py file and venv folder is exist. Activate virtual environment by running following command:
+```bash
+source venv/bin/activate
 ```
 
 Install the requirements:
