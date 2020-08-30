@@ -14,7 +14,7 @@ First, clone the repository to your local machine:
 https://github.com/shaonsust/Forum.git
 ```
 
-Go to root folder where manage.py file is exist. Run following command to create virtual environment:
+Go to root folder where manage.py file is exist. Then run the following command to create virtual environment:
 ```bash
 python3.8 -m venv venv
 ```
