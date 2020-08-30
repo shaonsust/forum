@@ -19,7 +19,7 @@ Go to root folder where manage.py file is exist. Run following command to create
 python3.8 -m venv venv
 ```
 
-Go to root folder where manage.py file and venv folder is exist. Activate virtual environment by running following command:
+Activate virtual environment by running following command:
 ```bash
 source venv/bin/activate
 ```
@@ -40,6 +40,18 @@ Create the database:
 
 ```bash
 python manage.py migrate
+```
+
+Create a super user:
+
+```bash
+python manage.py createsuperuser
+```
+
+Load some initial data:
+
+```bash
+python manage.py loaddata fixtures/initial_data.json
 ```
 
 Finally, run the development server:
