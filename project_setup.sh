@@ -1,6 +1,6 @@
 #!/bin/bash
 
-install_virtual_environment()
+create_virtual_environment()
 {
     python3.8 -m venv venv
 }
@@ -40,7 +40,7 @@ run_server()
     python manage.py runserver
 }
 
-install_virtual_environment
+create_virtual_environment
 activate_virtual_environment
 install_requirements
 copy_settings_file
@@ -48,4 +48,3 @@ create_database
 load_initial_data
 create_super_user
 run_server
-
