@@ -51,7 +51,7 @@ python manage.py createsuperuser
 Load some initial data:
 
 ```bash
-python manage.py loaddata fixtures/initial_data.json
+python manage.py loaddata initial_data.json
 ```
 
 Finally, run the development server:
