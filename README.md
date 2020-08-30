@@ -24,51 +24,58 @@ First go to project's root folder where manage.py file is exist. Run the followi
 
 ## Or Running the project locally by following steps:
 
-1. Go to project's root folder where manage.py file is exist. Then run the following command to create virtual environment:
+* Go to project's root folder where manage.py file is exist. Then run the following command to create virtual environment:
 
 ```bash
 python3.8 -m venv venv
 ```
 
-2. Activate virtual environment by running following command:
+* Activate virtual environment by running following command:
 ```bash
 source venv/bin/activate
 ```
 
-3. Install the requirements:
+* Install the requirements:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Setup the local configurations:
+* Setup the local configurations:
 
 ```bash
 cp .env.example .env
 ```
 
-5. Create the database:
+* Create the database:
 
 ```bash
 python manage.py migrate
 ```
 
-6. Load some initial data:
+* Load some initial data:
 
 ```bash
 python manage.py loaddata initial_data.json
 ```
 
-7. Create a super user:
+* Create a super user:
 
 ```bash
 python manage.py createsuperuser
 ```
 
-8. Finally, run the development server:
+* Finally, run the development server:
 
 ```bash
 python manage.py runserver
 ```
 
-9. The project will be available at **127.0.0.1:8000**.
+* The project will be available at **127.0.0.1:8000**.
+
+To run the project every time after setup, you must first activate the virtual environment and then run the server by following two command:
+
+```bast
+source venv/bin/activate
+python manage.py runserver
+```
